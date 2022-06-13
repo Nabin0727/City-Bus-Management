@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Dashboard-Add Vechicle";
+}
+
+<div class="row">
+    <h3>Menu</h3>
+    <div class="col-4">
+        <ul class="list-group">
+            <li class="list-group-item">Account</li>
+            <li class="list-group-item">Bus Details</li>
+            <li class="list-group-item">Route Details</li>
+             <li class="list-group-item">Stations</li>
+            <li class="list-group-item">Employee</li>
+            <li class="list-group-item">Settings</li>
+            <li class="list-group-item">Logout</li>
+
+        </ul>
+    </div>
+
+    <div class="col-8">
+        <h3>Add New Vehicle</h3>
+        <hr />
+        <form method="post">
+            <div class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Vehicel Type</option>
+                  <option value="1">Two Wheeler</option>
+                  <option value="2">Four Wheeler</option>
+                  <option value="3">Heavy</option>
+                  <option value="4">Others</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Vehicel Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Car">
+            </div>
+            <div class="mb-3">
+                <label for="vno" class="form-label">Vehicle Number</label>
+                <input type="number" class="form-control" id="vno" placeholder="Vehicel Number">
+            </div>
+            <hr />
+            <button type="submit" class="btn btn-success">Save</button>
+        </form>
+
+    </div>
+</div>
