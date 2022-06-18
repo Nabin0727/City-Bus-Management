@@ -1,7 +1,14 @@
+using City_Bus_Management_Project.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Database connection
+string connectionString = @"Data Source=NABIN-E01012\SQLEXPRESS;Persist Security Info=True;User ID=sa;Password=ssmsSQL";
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 

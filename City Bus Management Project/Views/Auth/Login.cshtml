@@ -2,7 +2,7 @@
 
     ViewData["Title"] = "Login";
 }
-
+@model City_Bus_Management_Project.Models.Login
 <div class="row bg">
     <div class="container">
         <div class="row justify-content-md-center">
@@ -11,16 +11,18 @@
                     <div class="card-body">
                         <div class="card-title">
                             <h3>Login</h3>
-                            <hr />
-                            <form method="post">
+                            <hr /> 
+                            <form method="post" asp-controller="AuthController" asp-action="Login">
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                    <label class="form-label" asp-for="Email"></label>
+                                    <input asp-for="Email" class="form-control" placeholder="name@example.com" />
+                                    <span class="text-danger" asp-validation-for="Email"></span>
                                 </div>
                                 
                                 <div class="mb-3">
-                                    <label for="password1" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="password1" placeholder="Password">
+                                    <label class="form-label" asp-for="Password"></label>
+                                    <input asp-for="Password" class="form-control" placeholder="Password"/>
+                                    <span class="text-danger" asp-validation-for="Password"></span>
                                 </div>
                                 
                                 <hr />

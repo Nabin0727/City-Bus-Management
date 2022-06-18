@@ -1,22 +1,53 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using City_Bus_Management_Project.Models;
 
 namespace City_Bus_Management_Project.Controllers
 {
     public class AuthController : Controller
     {
-        public IActionResult Index()
+        private DatabaseContext _context;
+
+        public AuthController(DatabaseContext context)
         {
-            return View();
+            _context = context;
         }
 
-        public ViewResult Signup()
+        public IActionResult Signup()
         {
             return View();
         }
-        public ViewResult Login()
+        public IActionResult Login()
         {
             return View();
-            
+
         }
+        [HttpPost]
+        public IActionResult Signup(Signup su)
+        {
+            if (ModelState.IsValid)
+            {
+                var s = new Signup()
+                {
+                    driverId = su.driverId,
+                    Name = su.Name,
+                    Email = su.Email,
+                    Bno = su.Bno,
+                    Password = su.Password
+
+                };
+                _context.Signups.Add(su); //insert
+                _context.SaveChanges();
+                TempData["msg"] = "Signup Sucessfull Login to Continue!";
+                return View();
+
+            }
+
+            else
+            {
+                TempData["error"] = "Field are empty";
+                return View();
+            }
+        }
+
     }
 }
