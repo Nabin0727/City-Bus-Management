@@ -12,7 +12,7 @@
                         <div class="card-title">
                             <h3>Login</h3>
                             <hr /> 
-                            <form method="post" asp-controller="AuthController" asp-action="Login">
+                            <form method="post" asp-controller="Auth" asp-action="Login">
                                 <div class="mb-3">
                                     <label class="form-label" asp-for="Email"></label>
                                     <input asp-for="Email" class="form-control" placeholder="name@example.com" />
@@ -26,7 +26,8 @@
                                 </div>
                                 
                                 <hr />
-                                <button type="submit" class="btn btn-success">Login</button>
+                                <button type="submit" class="btn btn-success">Login</button><br/>
+                                <p>If you don't have an account, create one <a asp-action="Signup" asp-controller="Auth">Signup</a></p>
                             </form>
                         </div>
                     </div>

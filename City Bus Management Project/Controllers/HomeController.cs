@@ -23,6 +23,28 @@ namespace City_Bus_Management_Project.Controllers
             return View();
         }
 
+        public IActionResult BookTicket()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult BusDetails()
+        {
+            return View();
+        }
+
+        public IActionResult RouteDetails()
+        {
+            return View();
+        }
+
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

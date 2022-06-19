@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nGuvHDm4uDna/fuYsruSMeoxZQvB30+qianps4Vv33U=",
+  "Hash": "DX6F1S1Z77rWMTCK7UG4cn6QyLnwcLi/dh9gxoyPFZg=",
   "Source": "City Bus Management Project",
   "BasePath": "_content/City Bus Management Project",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Bus2.png"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\source\\repos\\City Bus Management Project\\City Bus Management Project\\wwwroot\\img\\buspoint.png",
+      "SourceId": "City Bus Management Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\source\\repos\\City Bus Management Project\\City Bus Management Project\\wwwroot\\",
+      "BasePath": "_content/City Bus Management Project",
+      "RelativePath": "img/buspoint.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\buspoint.png"
     },
     {
       "Identity": "C:\\Users\\ASUS\\source\\repos\\City Bus Management Project\\City Bus Management Project\\wwwroot\\js\\site.js",

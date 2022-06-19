@@ -26,6 +26,7 @@ namespace City_Bus_Management_Project.Models
         public string Password { get; set; }
 
         [Required]
+        [Compare("Password")]
         public string confirmPassword { get; set; }
 
     

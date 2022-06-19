@@ -3,21 +3,10 @@
 }
 
 <div class="row">
-    <h3>Menu</h3>
-    <div class="col-4">
-        <ul class="list-group">
-            <li class="list-group-item">Account</li>
-            <li class="list-group-item">Bus Details</li>
-            <li class="list-group-item">Route Details</li>
-             <li class="list-group-item">Stations</li>
-            <li class="list-group-item">Employee</li>
-            <li class="list-group-item">Settings</li>
-            <li class="list-group-item">Logout</li>
-
-        </ul>
+      <div class="col-6">
+        <img src="~/img/buspoint.png" style="width:auto; height:auto;"/>
     </div>
-
-    <div class="col-8">
+    <div class="col-4">
         <h3>Add New Vehicle</h3>
         <hr />
         <form method="post">
@@ -32,12 +21,24 @@
             </div>
             <div class="mb-3">
                 <label for="name" class="form-label">Vehicel Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Car">
+                <input type="text" class="form-control"  placeholder="Car">
             </div>
             <div class="mb-3">
                 <label for="vno" class="form-label">Vehicle Number</label>
-                <input type="number" class="form-control" id="vno" placeholder="Vehicel Number">
+                <input type="number" class="form-control"  placeholder="Vehicel Number">
             </div>
+
+             <div class="mb-3">
+                <label for="did" class="form-label" placeholder="Driver ID">Driver ID</label>
+                <input type="number" class="form-control" placeholder="Driver ID">
+            </div>
+
+             <div class="mb-3">
+                <label for="rno" class="form-label" placeholder="Route No">Route No</label>
+                <input type="text" class="form-control"  placeholder="Route No">
+            </div>
+
+
             <hr />
             <button type="submit" class="btn btn-success">Save</button>
         </form>

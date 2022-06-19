@@ -3860,6 +3860,7 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  position:fixed!important;
 }
 
 .nav-link {
@@ -3868,6 +3869,7 @@ textarea.form-control-lg {
   color: #0d6efd;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  font-size: 18px;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {

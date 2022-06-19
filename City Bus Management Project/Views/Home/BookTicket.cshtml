@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Ticket Booking Portal";
+}
+@model City_Bus_Management_Project.Models.BusTicket;
+
+<div class="row justify-content-md-center">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+
+        <h4 class="text-danger text-center">Grab Your Seat!</h4>
+
+        <form method="post" asp-controller="Home" asp-action="BookTicket">
+            <div class="row">
+                 <div class="mb-3">
+                <lable class="form-label" asp-for="Route" >Choose Route</lable>
+                <select class=" form-control" asp-for="Route" asp-items="Html.GetEnumSelectList<Route>()">
+                    <<option value="">Select Route</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <lable class="form-label" asp-for="Destination" >Choose Bus Destination</lable>
+                <select class=" form-control" asp-for="Destination" asp-items="Html.GetEnumSelectList<Destination>()">
+                    <<option value="">Select Destination</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <lable class="form-label" asp-for="BusPoint" >Choose Bus Point</lable>
+                <select class=" form-control" asp-for="BusPoint" asp-items="Html.GetEnumSelectList<BusPoint>()">
+                    <<option value="">Select Bus Point</option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" asp-for="Date">Date</label>
+                <input type="Date" asp-for="Date" class="form-control"/>
+            </div>
+ 
+            
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success">Confirm</button>
+            </div>
+
+
+            </div>
+        </form>
+            </div>
+        </div>
+    </div>
+</div>
