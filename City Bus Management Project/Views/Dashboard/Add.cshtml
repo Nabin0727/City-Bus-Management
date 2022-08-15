@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Dashboard-Add Vechicle";
 }
+@model City_Bus_Management_Project.Models.Add
 
 <div class="row">
       <div class="col-6">
@@ -9,7 +10,17 @@
     <div class="col-4">
         <h3>Add New Vehicle</h3>
         <hr />
-        <form method="post">
+
+       @if(TempData["error"] is not null )
+        {
+            <div class="alert alert-danger">@TempData["error"]</div>
+        }
+        @if (TempData["msg"] is not null)
+        {
+            <div class="alert alert-success">@TempData["msg"]</div>
+        }
+       
+        <form method="post" asp-controller="Dashboard" asp-action="Add">
             <div class="mb-3">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Vehicel Type</option>
@@ -20,22 +31,26 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="name" class="form-label">Vehicel Name</label>
-                <input type="text" class="form-control"  placeholder="Car">
+                <label asp-for="VName" class="form-label">Vehicel Name</label>
+                <input type="text" asp-for="VName" class="form-control"  placeholder="Car">
+                <span class="text-danger" asp-validation-for="VName"></span>
             </div>
             <div class="mb-3">
-                <label for="vno" class="form-label">Vehicle Number</label>
-                <input type="number" class="form-control"  placeholder="Vehicel Number">
+                <label asp-for="Vno" class="form-label">Vehicle Number</label>
+                <input type="number" asp-for="Vno"  class="form-control"  placeholder="Vehicel Number">
+                <span class="text-danger" asp-validation-for="Vno"></span>
             </div>
 
              <div class="mb-3">
-                <label for="did" class="form-label" placeholder="Driver ID">Driver ID</label>
-                <input type="number" class="form-control" placeholder="Driver ID">
+                <label asp-for="Did" class="form-label" placeholder="Driver ID">Driver ID</label>
+                <input type="number" asp-for="Did" class="form-control" placeholder="Driver ID">
+                <span class="text-danger" asp-validation-for="Did"></span>
             </div>
 
              <div class="mb-3">
-                <label for="rno" class="form-label" placeholder="Route No">Route No</label>
-                <input type="text" class="form-control"  placeholder="Route No">
+                <label asp-for="Rno" class="form-label" placeholder="Route No">Route No</label>
+                <input type="text" asp-for="Rno" class="form-control"  placeholder="Route No">
+                <span class="text-danger" asp-validation-for="Rno"></span>
             </div>
 
 

@@ -11,5 +11,7 @@ namespace City_Bus_Management_Project.Models
         public DbSet<Login> Logins { get; set; }
         public DbSet<Signup> Signups { get; set; }
 
+        public DbSet<Add> Adds { get; set; }
+
     }
 }

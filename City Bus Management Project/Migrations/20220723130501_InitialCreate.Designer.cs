@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace City_Bus_Management_Project.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20220618142612_InitialCreate")]
+    [Migration("20220723130501_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,6 +22,32 @@ namespace City_Bus_Management_Project.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("City_Bus_Management_Project.Models.Add", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Did")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rno")
+                        .HasColumnType("int");
+
+                    b.Property<string>("VName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Vno")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Adds");
+                });
 
             modelBuilder.Entity("City_Bus_Management_Project.Models.Login", b =>
                 {

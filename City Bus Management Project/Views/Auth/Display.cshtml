@@ -1,0 +1,55 @@
+﻿@{
+
+    ViewData["Title"] = "Display";
+}
+@model IEnumerable<City_Bus_Management_Project.Models.Signup>
+
+<div class="row bg">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h3>Employees Details</h3>
+                            <a class="btn btn-primary" asp-controller="Auth" asp-action="Signup">Create Driver</a>
+                            <hr/>
+
+                            @if(TempData["error"] is not null )
+                            {
+                                <div class="alert alert-danger">@TempData["error"]</div>
+                            }
+                            @if(TempData["msg"] is not null)
+                            {
+                                <div class="alert alert-success">@TempData["msg"]</div>
+                            }
+
+                        </div>
+                        <table class="table table-border">
+                            <th>DriverId</th>
+                            <th>Name </th>
+                            <th>Email </th>
+                            <th>Bus No </th>
+                       
+                        <tbody>
+                            @foreach(var s in Model)
+                            {
+                                <tr class="text-center">
+                                    <td>@s.driverId</td>
+                                    <td>@s.Name</td>
+                                    <td>@s.Email</td>
+                                    <td>@s.Bno</td>
+                                    <td>
+                                        <a class="btn btn-primary" asp-controller="Auth" asp-action="Edit" asp-route-id="@s.Id">Edit</a>
+                                        <a class="btn btn-danger" asp-controller="auth" asp-action="Remove" asp-route-id="@s.Id">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

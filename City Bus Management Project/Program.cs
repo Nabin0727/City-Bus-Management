@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 //Database connection
-string connectionString = @"Data Source=NABIN-E01012\SQLEXPRESS;Persist Security Info=True;User ID=sa;Password=ssmsSQL";
+string connectionString = @"Data Source=Lopchan\SQLEXPRESS; Persist Security Info=True;User ID=sa;Password=MYSQL";
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
 
 var app = builder.Build();
